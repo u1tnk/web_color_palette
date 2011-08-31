@@ -201,10 +201,10 @@ $(function(){
 	var createMyColorTag = function( className, cssProperty, colorName ){
 
 		var htmlTag = [
-			'<span class="selected-color-wrapper ' + className + '">',
+			'<li class="selected-color-wrapper ' + className + '">',
 				'<span class="selected-color" style="' + cssProperty + '">&nbsp;</span>',
 				'<span class="text">' + colorName + '</span>',
-			'</span>'
+			'</li>'
 		].join( '' );
 		return htmlTag;
 
@@ -299,7 +299,8 @@ $(function(){
 			var className = 'myColor' + myColorCounter ;
 			console.log( 'odd' + className);
 			$( this ).addClass( 'selected-td myColor' + myColorCounter ).text( '●' );
-			$( createMyColorTag( className, cssProperty, color ) ).appendTo( '#myPalette' );
+			//$( createMyColorTag( className, cssProperty, color ) ).appendTo( '#myPalette' );
+			$( createMyColorTag( className, cssProperty, color ) ).appendTo( '#sortable' );
 
 		}
 	});
@@ -312,5 +313,12 @@ $(function(){
 
 	});
 
+  $("#sortable").sortable({
+    axis: "x",
+    items: ".selected-color-wrapper",
+    cursor: "move",
+    containment: 'parent',
+    opacity: 0.5
+  });
 
 });

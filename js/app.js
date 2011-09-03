@@ -299,7 +299,6 @@ $(function(){
 			var className = 'myColor' + myColorCounter ;
 			console.log( 'odd' + className);
 			$( this ).addClass( 'selected-td myColor' + myColorCounter ).text( '●' );
-			//$( createMyColorTag( className, cssProperty, color ) ).appendTo( '#myPalette' );
 			$( createMyColorTag( className, cssProperty, color ) ).appendTo( '#sortable' );
 
 		}

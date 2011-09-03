@@ -201,10 +201,10 @@ $(function(){
 	var createMyColorTag = function( className, cssProperty, colorName ){
 
 		var htmlTag = [
-			'<li class="selected-color-wrapper ' + className + '">',
+			'<div class="selected-color-wrapper ' + className + '">',
 				'<span class="selected-color" style="' + cssProperty + '">&nbsp;</span>',
 				'<span class="text">' + colorName + '</span>',
-			'</li>'
+			'</div>'
 		].join( '' );
 		return htmlTag;
 

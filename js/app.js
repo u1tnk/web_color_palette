@@ -314,10 +314,8 @@ $(function(){
 	});
 
   $("#sortable").sortable({
-    axis: "x",
     items: ".selected-color-wrapper",
     cursor: "move",
-    containment: 'parent',
     opacity: 0.5
   });
 
